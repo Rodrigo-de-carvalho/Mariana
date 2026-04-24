@@ -5,7 +5,6 @@ window.addEventListener('load', () => {
   }, 1900);
 });
 
-// Campo de estrelas
 (function () {
   const canvas = document.getElementById('stars');
   const ctx = canvas.getContext('2d');
@@ -29,25 +28,21 @@ window.addEventListener('load', () => {
   init(); draw();
 })();
 
-// Nav scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
 
-// Hero reveal
 function triggerHeroReveal() {
   document.querySelectorAll('#hero .reveal').forEach((el, i) => {
     setTimeout(() => el.classList.add('visible'), i * 220);
   });
 }
 
-// Scroll animations
 const observer = new IntersectionObserver(
   entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); observer.unobserve(e.target); } }); },
   { threshold: 0.12 }
 );
 document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 
-// Poema stagger
 const poemCard = document.querySelector('.poem-card');
 if (poemCard) {
   const poemObs = new IntersectionObserver(entries => {
@@ -62,7 +57,6 @@ if (poemCard) {
   poemObs.observe(poemCard);
 }
 
-// Contador de dias desde 4 de dezembro de 2024
 (function () {
   const start = new Date('2024-12-04');
   const now   = new Date();
@@ -78,12 +72,10 @@ if (poemCard) {
   }, 24);
 })();
 
-// Flip cards — razões
 document.querySelectorAll('.razao-card').forEach(card => {
   card.addEventListener('click', () => card.classList.toggle('flipped'));
 });
 
-// Cursor coração
 const cursorEl = document.getElementById('cursor');
 let curX = 0, curY = 0, aimX = 0, aimY = 0;
 document.addEventListener('mousemove', e => { aimX = e.clientX; aimY = e.clientY; });
@@ -95,7 +87,6 @@ document.addEventListener('mousemove', e => { aimX = e.clientX; aimY = e.clientY
   requestAnimationFrame(animateCursor);
 })();
 
-// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
@@ -105,7 +96,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// Easter egg — Konami code
 const konami = [38,38,40,40,37,39,37,39,66,65];
 let konamiIdx = 0;
 document.addEventListener('keydown', e => {
