@@ -3,276 +3,381 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rodrigo & Mariana</title>
+  <title>Rodrigo ♥ Mariana</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div id="cursor"><span>♥</span></div>
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor"><svg viewBox="0 0 20 20"><path d="M10 17s-7-4.9-7-9.5A4.5 4.5 0 0 1 10 4a4.5 4.5 0 0 1 7 3.5C17 12.1 10 17 10 17z"/></svg></div>
 
-  <div id="loading">
-    <div class="loading-inner">
-      <div class="loading-initials">R <span>♥</span> M</div>
-      <div class="loading-bar-wrap"><div class="loading-bar"></div></div>
-    </div>
-  </div>
-
+  <!-- CANVAS ESTRELAS -->
   <canvas id="stars"></canvas>
 
-  <nav id="nav">
-    <div class="nav-brand">R <span>♥</span> M</div>
-    <ul>
-      <li><a href="#historia">História</a></li>
-      <li><a href="#poema">Poema</a></li>
-      <li><a href="#razoes">Razões</a></li>
-      <li><a href="#musica">Música</a></li>
-      <li><a href="#galeria">Galeria</a></li>
-      <li><a href="#mensagem">Mensagem</a></li>
-    </ul>
-  </nav>
+  <!-- INTRO CINEMATOGRÁFICO -->
+  <div id="intro">
+    <div class="intro-text" id="intro-text"></div>
+    <div class="intro-overlay" id="intro-overlay"></div>
+  </div>
 
+  <!-- CENA PRINCIPAL / HERO -->
   <section id="hero">
-    <div class="hero-content">
-      <p class="hero-eyebrow reveal">Para a pessoa mais especial da minha vida</p>
-      <h1 class="hero-title reveal delay-1">
-        <span class="name-r">Rodrigo</span>
-        <span class="hero-heart">♥</span>
-        <span class="name-m">Mariana</span>
-      </h1>
-      <p class="hero-sub reveal delay-2">Uma história que o destino fez questão de continuar</p>
-      <a href="#historia" class="btn-gold reveal delay-3">Descobrir nossa história</a>
-      <div class="hero-counter reveal delay-4">
-        <span class="counter-num" id="days-counter">—</span>
-        <span class="counter-label">dias desde o nosso primeiro beijo ♥</span>
+    <div class="hero-rm">
+      <span class="rm-letter rm-r">R</span>
+      <div class="rm-heart-wrap">
+        <svg class="heart-svg" viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="heart-path" d="M50 85 C50 85 5 55 5 28 A22 22 0 0 1 50 20 A22 22 0 0 1 95 28 C95 55 50 85 50 85Z"/>
+        </svg>
       </div>
+      <span class="rm-letter rm-m">M</span>
     </div>
-    <div class="scroll-hint">
-      <div class="mouse"><div class="mouse-wheel"></div></div>
-      <p>Role para baixo</p>
+    <p class="hero-tagline" id="hero-tagline">Uma história que o destino fez questão de continuar</p>
+    <div class="hero-counter">
+      <span class="counter-num" id="days-counter">—</span>
+      <span class="counter-label">dias juntos</span>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>descobrir</span>
     </div>
   </section>
 
+  <!-- LINHA DO TEMPO HORIZONTAL -->
   <section id="historia">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Nossa História</h2>
-        <p class="section-sub">Dois anos que me mudaram para sempre</p>
-        <div class="gold-line"></div>
-      </div>
-      <div class="timeline">
-        <div class="tl-item animate-on-scroll">
-          <div class="tl-icon">✨</div>
-          <div class="tl-body">
+    <div class="tl-header">
+      <p class="tl-eyebrow">Nossa</p>
+      <h2 class="tl-title">História</h2>
+    </div>
+    <div class="tl-track-wrap">
+      <div class="tl-track" id="tlTrack">
+        <div class="tl-slide">
+          <div class="tl-illus">
+            <svg viewBox="0 0 80 80" fill="none">
+              <circle cx="40" cy="40" r="28" stroke="#c9a84c" stroke-width="1.2" stroke-dasharray="4 3" opacity=".4"/>
+              <circle cx="40" cy="40" r="16" fill="none" stroke="#c9a84c" stroke-width="1" opacity=".3"/>
+              <path d="M28 44 Q40 24 52 44" stroke="#e8a0b4" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <circle cx="28" cy="44" r="2.5" fill="#c9a84c" opacity=".8"/>
+              <circle cx="52" cy="44" r="2.5" fill="#c9a84c" opacity=".8"/>
+            </svg>
+          </div>
+          <div class="tl-content">
             <span class="tl-tag">Há 2 anos</span>
             <h3>O Começo</h3>
-            <p>Quando o destino colocou você no meu caminho e eu percebi, sem ainda entender direito, que nada mais seria igual. Alguns encontros mudam a gente — o nosso foi um desses.</p>
+            <p>Quando o destino colocou você no meu caminho e eu percebi, sem ainda entender direito, que nada mais seria igual.</p>
           </div>
         </div>
-        <div class="tl-item right animate-on-scroll">
-          <div class="tl-icon">💋</div>
-          <div class="tl-body">
+
+        <div class="tl-slide">
+          <div class="tl-illus">
+            <svg viewBox="0 0 80 80" fill="none">
+              <path d="M40 62 C40 62 14 46 14 30 A13 13 0 0 1 40 24 A13 13 0 0 1 66 30 C66 46 40 62 40 62Z" stroke="#e8a0b4" stroke-width="1.2" fill="none" opacity=".5"/>
+              <path d="M40 55 C40 55 20 42 20 30 A11 11 0 0 1 40 26 A11 11 0 0 1 60 30 C60 42 40 55 40 55Z" fill="#e8a0b4" opacity=".18"/>
+              <circle cx="40" cy="18" r="3" fill="#c9a84c" opacity=".7"/>
+              <line x1="40" y1="21" x2="40" y2="25" stroke="#c9a84c" stroke-width="1" opacity=".5"/>
+            </svg>
+          </div>
+          <div class="tl-content">
             <span class="tl-tag">4 de Dezembro de 2024</span>
             <h3>O Beijo que o Universo Guardava</h3>
-            <p>Naquela noite, o tempo parou. Foi o beijo que eu não sabia que estava esperando, mas que fez tudo — absolutamente tudo — fazer sentido de uma vez só.</p>
+            <p>Naquela noite o tempo parou. Foi o beijo que eu não sabia que estava esperando — mas que fez tudo fazer sentido de uma vez só.</p>
           </div>
         </div>
-        <div class="tl-item animate-on-scroll">
-          <div class="tl-icon">🔄</div>
-          <div class="tl-body">
+
+        <div class="tl-slide">
+          <div class="tl-illus">
+            <svg viewBox="0 0 80 80" fill="none">
+              <path d="M20 50 C20 50 35 30 40 40 C45 50 60 30 60 30" stroke="#c9a84c" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".6"/>
+              <circle cx="20" cy="50" r="3" fill="#e8a0b4" opacity=".8"/>
+              <circle cx="60" cy="30" r="3" fill="#e8a0b4" opacity=".8"/>
+              <circle cx="40" cy="40" r="5" fill="none" stroke="#c9a84c" stroke-width="1" opacity=".5"/>
+              <circle cx="40" cy="40" r="2" fill="#c9a84c" opacity=".8"/>
+            </svg>
+          </div>
+          <div class="tl-content">
             <span class="tl-tag">O Reencontro</span>
             <h3>Porque o que é nosso volta</h3>
-            <p>A gente pode se distanciar, mas o que existe entre nós é grande demais pra se perder. Voltamos — e dessa vez tudo ficou mais claro, mais certo, mais nosso.</p>
+            <p>A gente pode se distanciar, mas o que existe entre nós é grande demais pra se perder. Voltamos — e ficou mais certo, mais nosso.</p>
           </div>
         </div>
-        <div class="tl-item right animate-on-scroll">
-          <div class="tl-icon">♾️</div>
-          <div class="tl-body">
+
+        <div class="tl-slide">
+          <div class="tl-illus">
+            <svg viewBox="0 0 80 80" fill="none">
+              <path d="M25 55 L25 35 L40 25 L55 35 L55 55 Z" stroke="#c9a84c" stroke-width="1.2" fill="none" opacity=".5"/>
+              <rect x="33" y="42" width="14" height="13" rx="1" stroke="#e8a0b4" stroke-width="1" fill="none" opacity=".6"/>
+              <circle cx="40" cy="35" r="3" fill="#c9a84c" opacity=".5"/>
+              <path d="M22 55 L58 55" stroke="#c9a84c" stroke-width="1" opacity=".3"/>
+            </svg>
+          </div>
+          <div class="tl-content">
             <span class="tl-tag">Hoje</span>
             <h3>Aqui. Juntos.</h3>
             <p>Nunca tive tanta certeza de onde quero estar. Do seu lado. Sempre.</p>
           </div>
         </div>
       </div>
+      <button class="tl-btn tl-prev" id="tlPrev" aria-label="anterior">&#8592;</button>
+      <button class="tl-btn tl-next" id="tlNext" aria-label="próximo">&#8594;</button>
+      <div class="tl-dots" id="tlDots">
+        <span class="tl-dot active"></span>
+        <span class="tl-dot"></span>
+        <span class="tl-dot"></span>
+        <span class="tl-dot"></span>
+      </div>
     </div>
   </section>
 
+  <!-- POEMA PARALLAX -->
   <section id="poema">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Para Você</h2>
-        <p class="section-sub">Com tudo que carrego no peito</p>
-        <div class="gold-line"></div>
+    <div class="poema-bg" id="poema-bg"></div>
+    <div class="poema-inner">
+      <div class="poema-deco open">❝</div>
+      <div class="poema-lines" id="poemaLines">
+        <p class="pl">Dois anos de olhares que não se esqueciam,</p>
+        <p class="pl">de momentos que o tempo não apagava,</p>
+        <p class="pl">e numa noite de dezembro, as mãos se uniam —</p>
+        <p class="pl">o beijo que o universo guardava.</p>
+        <p class="pl gap"></p>
+        <p class="pl">Não é data marcada, não é ocasião —</p>
+        <p class="pl">é só o que sinto transbordar de mim.</p>
+        <p class="pl">Mariana, você é minha definição</p>
+        <p class="pl">de tudo que eu quero, do começo ao fim.</p>
+        <p class="pl gap"></p>
+        <p class="pl">Voltamos, e tudo faz sentido agora,</p>
+        <p class="pl">como se o destino fosse nos lembrar</p>
+        <p class="pl">que não existe distância nem demora</p>
+        <p class="pl">que separe o que foi feito pra ficar.</p>
+        <p class="pl gap"></p>
+        <p class="pl">Você não é só quem eu amo, meu bem —</p>
+        <p class="pl">você é o lar que meu coração contém.</p>
       </div>
-      <div class="poem-card animate-on-scroll">
-        <div class="poem-quote open">❝</div>
-        <div class="poem-lines">
-          <p>Dois anos de olhares que não se esqueciam,</p>
-          <p>de momentos que o tempo não apagava,</p>
-          <p>e numa noite de dezembro, as mãos se uniam —</p>
-          <p>o beijo que o universo guardava.</p>
-          <br />
-          <p>Não é data marcada, não é ocasião —</p>
-          <p>é só o que sinto transbordar de mim.</p>
-          <p>Mariana, você é minha definição</p>
-          <p>de tudo que eu quero, do começo ao fim.</p>
-          <br />
-          <p>Voltamos, e tudo faz sentido agora,</p>
-          <p>como se o destino fosse nos lembrar</p>
-          <p>que não existe distância nem demora</p>
-          <p>que separe o que foi feito pra ficar.</p>
-          <br />
-          <p>Você não é só quem eu amo, meu bem —</p>
-          <p>você é o lar que meu coração contém.</p>
-        </div>
-        <div class="poem-quote close">❞</div>
-        <div class="poem-author">— Rodrigo</div>
-      </div>
+      <div class="poema-deco close">❞</div>
+      <div class="poema-author">— Rodrigo</div>
     </div>
   </section>
 
+  <!-- ENVELOPES / RAZÕES -->
   <section id="razoes">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Razões</h2>
-        <p class="section-sub">Por que eu te amo — clique em cada carta para descobrir</p>
+        <p class="section-eyebrow">Por que te amo</p>
+        <h2 class="section-title">Abra cada carta</h2>
         <div class="gold-line"></div>
       </div>
-      <div class="razoes-grid">
-        <div class="razao-card animate-on-scroll"><div class="razao-inner">
-          <div class="razao-front"><span>01</span><div class="razao-heart">♥</div></div>
-          <div class="razao-back"><p>Pelo jeito que você sorri — e transforma qualquer dia cinza em algo especial.</p></div>
-        </div></div>
-        <div class="razao-card animate-on-scroll"><div class="razao-inner">
-          <div class="razao-front"><span>02</span><div class="razao-heart">♥</div></div>
-          <div class="razao-back"><p>Por me fazer querer ser uma versão melhor de mim, só de estar perto de você.</p></div>
-        </div></div>
-        <div class="razao-card animate-on-scroll"><div class="razao-inner">
-          <div class="razao-front"><span>03</span><div class="razao-heart">♥</div></div>
-          <div class="razao-back"><p>Pelo olhar que fala mais do que mil palavras — e que eu sei ler de cor.</p></div>
-        </div></div>
-        <div class="razao-card animate-on-scroll"><div class="razao-inner">
-          <div class="razao-front"><span>04</span><div class="razao-heart">♥</div></div>
-          <div class="razao-back"><p>Por ser você, do jeito mais único e bonito que existe, sem nem perceber.</p></div>
-        </div></div>
-        <div class="razao-card animate-on-scroll"><div class="razao-inner">
-          <div class="razao-front"><span>05</span><div class="razao-heart">♥</div></div>
-          <div class="razao-back"><p>Pela presença que transforma qualquer lugar em lar, só de você estar ali.</p></div>
-        </div></div>
-        <div class="razao-card animate-on-scroll"><div class="razao-inner">
-          <div class="razao-front"><span>06</span><div class="razao-heart">♥</div></div>
-          <div class="razao-back"><p>Por cada risada compartilhada que guardo com tanto carinho no peito.</p></div>
-        </div></div>
-        <div class="razao-card animate-on-scroll"><div class="razao-inner">
-          <div class="razao-front"><span>07</span><div class="razao-heart">♥</div></div>
-          <div class="razao-back"><p>Pela leveza que você traz pra minha vida — e que só você sabe trazer.</p></div>
-        </div></div>
-        <div class="razao-card animate-on-scroll"><div class="razao-inner">
-          <div class="razao-front"><span>08</span><div class="razao-heart">♥</div></div>
-          <div class="razao-back"><p>Por me entender como ninguém mais consegue — até quando eu não digo nada.</p></div>
-        </div></div>
-        <div class="razao-card animate-on-scroll"><div class="razao-inner">
-          <div class="razao-front"><span>09</span><div class="razao-heart">♥</div></div>
-          <div class="razao-back"><p>Pelo carinho que você carrega em tudo que faz — é impossível não amar.</p></div>
-        </div></div>
-        <div class="razao-card animate-on-scroll"><div class="razao-inner">
-          <div class="razao-front"><span>10</span><div class="razao-heart">♥</div></div>
-          <div class="razao-back"><p>Por existir, por voltar, e por ser minha. Isso já é mais do que qualquer razão.</p></div>
-        </div></div>
+      <div class="envelopes-grid">
+
+        <div class="env-wrap">
+          <div class="envelope" tabindex="0">
+            <div class="env-flap"></div>
+            <div class="env-body">
+              <div class="env-seal">♥</div>
+            </div>
+            <div class="env-letter">
+              <p>Pelo jeito que você sorri — e transforma qualquer dia cinza em algo especial.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="env-wrap">
+          <div class="envelope" tabindex="0">
+            <div class="env-flap"></div>
+            <div class="env-body"><div class="env-seal">♥</div></div>
+            <div class="env-letter"><p>Por me fazer querer ser uma versão melhor de mim, só de estar perto de você.</p></div>
+          </div>
+        </div>
+
+        <div class="env-wrap">
+          <div class="envelope" tabindex="0">
+            <div class="env-flap"></div>
+            <div class="env-body"><div class="env-seal">♥</div></div>
+            <div class="env-letter"><p>Pelo olhar que fala mais do que mil palavras — e que eu sei ler de cor.</p></div>
+          </div>
+        </div>
+
+        <div class="env-wrap">
+          <div class="envelope" tabindex="0">
+            <div class="env-flap"></div>
+            <div class="env-body"><div class="env-seal">♥</div></div>
+            <div class="env-letter"><p>Por ser você, do jeito mais único e bonito que existe, sem nem perceber.</p></div>
+          </div>
+        </div>
+
+        <div class="env-wrap">
+          <div class="envelope" tabindex="0">
+            <div class="env-flap"></div>
+            <div class="env-body"><div class="env-seal">♥</div></div>
+            <div class="env-letter"><p>Pela presença que transforma qualquer lugar em lar, só de você estar ali.</p></div>
+          </div>
+        </div>
+
+        <div class="env-wrap">
+          <div class="envelope" tabindex="0">
+            <div class="env-flap"></div>
+            <div class="env-body"><div class="env-seal">♥</div></div>
+            <div class="env-letter"><p>Por cada risada compartilhada que guardo com tanto carinho no peito.</p></div>
+          </div>
+        </div>
+
+        <div class="env-wrap">
+          <div class="envelope" tabindex="0">
+            <div class="env-flap"></div>
+            <div class="env-body"><div class="env-seal">♥</div></div>
+            <div class="env-letter"><p>Pela leveza que você traz pra minha vida — e que só você sabe trazer.</p></div>
+          </div>
+        </div>
+
+        <div class="env-wrap">
+          <div class="envelope" tabindex="0">
+            <div class="env-flap"></div>
+            <div class="env-body"><div class="env-seal">♥</div></div>
+            <div class="env-letter"><p>Por me entender como ninguém mais consegue — até quando eu não digo nada.</p></div>
+          </div>
+        </div>
+
+        <div class="env-wrap">
+          <div class="envelope" tabindex="0">
+            <div class="env-flap"></div>
+            <div class="env-body"><div class="env-seal">♥</div></div>
+            <div class="env-letter"><p>Pelo carinho que você carrega em tudo que faz — é impossível não amar.</p></div>
+          </div>
+        </div>
+
+        <div class="env-wrap">
+          <div class="envelope" tabindex="0">
+            <div class="env-flap"></div>
+            <div class="env-body"><div class="env-seal">♥</div></div>
+            <div class="env-letter"><p>Por existir, por voltar, e por ser minha. Isso já é mais do que qualquer razão.</p></div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
+  <!-- PLAYER DE MÚSICA -->
   <section id="musica">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Nossa Música</h2>
-        <p class="section-sub">A trilha sonora do que somos</p>
+        <p class="section-eyebrow">Nossa Música</p>
+        <h2 class="section-title">A trilha sonora do que somos</h2>
         <div class="gold-line"></div>
       </div>
-      <div class="music-card animate-on-scroll">
-        <div class="vinyl-wrap">
-          <div class="vinyl">
-            <div class="vinyl-groove g1"></div>
-            <div class="vinyl-groove g2"></div>
-            <div class="vinyl-groove g3"></div>
-            <div class="vinyl-center">R♥M</div>
+      <div class="player-card">
+        <div class="player-disc-area">
+          <div class="player-disc" id="playerDisc">
+            <div class="disc-ring r1"></div>
+            <div class="disc-ring r2"></div>
+            <div class="disc-ring r3"></div>
+            <div class="disc-center">R♥M</div>
           </div>
-          <div class="vinyl-arm"></div>
+          <div class="disc-needle" id="discNeedle"></div>
         </div>
-        <div class="music-info">
-          <h3>Nunca Amei Ninguém</h3>
-          <p class="music-artists">Tiaguinho & Sorriso Maroto</p>
-          <div class="wave-bars">
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span>
+        <div class="player-info">
+          <p class="player-artist">Tiaguinho &amp; Sorriso Maroto</p>
+          <h3 class="player-title">Nunca Amei Ninguém</h3>
+          <p class="player-desc">A música que fala tudo que às vezes as palavras não conseguem dizer — é a nossa.</p>
+
+          <div class="player-wave" id="playerWave">
+            <canvas id="waveCanvas"></canvas>
           </div>
-          <p class="music-quote">"Porque é você, só você, que faz o meu mundo girar..."</p>
+
+          <div class="player-controls">
+            <div class="player-progress-wrap">
+              <div class="player-progress-bar">
+                <div class="player-progress-fill" id="progressFill"></div>
+                <div class="player-progress-thumb" id="progressThumb"></div>
+              </div>
+              <div class="player-times">
+                <span id="timeNow">0:00</span>
+                <span id="timeTotal">4:12</span>
+              </div>
+            </div>
+            <div class="player-btns">
+              <button class="pbtn pbtn-skip" id="btnPrev" aria-label="anterior">
+                <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+              </button>
+              <button class="pbtn pbtn-play" id="btnPlay" aria-label="play/pause">
+                <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6zm8-14v14h4V5z"/></svg>
+              </button>
+              <button class="pbtn pbtn-skip" id="btnNext" aria-label="próximo">
+                <svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zm2.5-6 8.5 6V6z" transform="scale(-1,1) translate(-24,0)"/></svg>
+              </button>
+            </div>
+          </div>
+
         </div>
-      </div>
-      <div class="yt-wrap animate-on-scroll">
-        <iframe
-          src="https://www.youtube.com/embed/hq-miRkYmVI?rel=0&modestbranding=1&color=white"
-          title="Nunca Amei Ninguém — Tiaguinho & Sorriso Maroto"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
       </div>
     </div>
   </section>
 
+  <!-- GALERIA POLAROID -->
   <section id="galeria">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Nossos Momentos</h2>
-        <p class="section-sub">Memórias que guardo com carinho</p>
-        <div class="gold-line"></div>
+    <div class="section-header" style="position:relative;z-index:2;padding:0 5% 3rem;">
+      <p class="section-eyebrow">Nossos Momentos</p>
+      <h2 class="section-title">Memórias guardadas com carinho</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="polaroid-table" id="polaroidTable">
+      <div class="polaroid" style="--r:-4deg;--tx:0%;--ty:0%">
+        <div class="polaroid-img"><img src="img/WhatsApp Image 2026-04-24 at 08.49.05 (1).jpeg" alt="Rodrigo e Mariana" loading="lazy"/></div>
+        <div class="polaroid-caption">nosso jeito</div>
       </div>
-      <div class="gallery-grid">
-        <div class="gallery-item animate-on-scroll">
-          <img src="img/WhatsApp Image 2026-04-24 at 08.49.05 (1).jpeg" alt="Rodrigo e Mariana" />
-        </div>
-        <div class="gallery-item animate-on-scroll">
-          <img src="img/WhatsApp Image 2026-04-24 at 08.49.05.jpeg" alt="Rodrigo e Mariana" />
-        </div>
-        <div class="gallery-item large animate-on-scroll">
-          <img src="img/WhatsApp Image 2026-04-24 at 09.08.22.jpeg" alt="Mariana" style="object-position: center top;" />
-        </div>
-        <div class="gallery-item animate-on-scroll">
-          <img src="img/WhatsApp Image 2026-04-24 at 08.49.06.jpeg" alt="Rodrigo e Mariana" style="object-position: center top;" />
-        </div>
-        <div class="gallery-item animate-on-scroll">
-          <img src="img/WhatsApp Image 2026-04-24 at 08.49.07.jpeg" alt="Mariana" />
-        </div>
+      <div class="polaroid" style="--r:3.5deg;--tx:0%;--ty:0%">
+        <div class="polaroid-img"><img src="img/WhatsApp Image 2026-04-24 at 08.49.05.jpeg" alt="Rodrigo e Mariana" loading="lazy"/></div>
+        <div class="polaroid-caption">sempre juntos</div>
+      </div>
+      <div class="polaroid" style="--r:-2deg;--tx:0%;--ty:0%">
+        <div class="polaroid-img"><img src="img/WhatsApp Image 2026-04-24 at 09.08.22.jpeg" alt="Mariana" loading="lazy" style="object-position:center top"/></div>
+        <div class="polaroid-caption">ela</div>
+      </div>
+      <div class="polaroid" style="--r:5deg;--tx:0%;--ty:0%">
+        <div class="polaroid-img"><img src="img/WhatsApp Image 2026-04-24 at 08.49.06.jpeg" alt="Rodrigo e Mariana" loading="lazy" style="object-position:center top"/></div>
+        <div class="polaroid-caption">nosso mundo</div>
+      </div>
+      <div class="polaroid" style="--r:-3.5deg;--tx:0%;--ty:0%">
+        <div class="polaroid-img"><img src="img/WhatsApp Image 2026-04-24 at 08.49.07.jpeg" alt="Mariana" loading="lazy"/></div>
+        <div class="polaroid-caption">minha favorita</div>
+      </div>
+    </div>
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+      <div class="lb-backdrop" id="lbBackdrop"></div>
+      <div class="lb-img-wrap">
+        <img id="lbImg" src="" alt=""/>
+        <button class="lb-close" id="lbClose" aria-label="fechar">&#x2715;</button>
       </div>
     </div>
   </section>
 
+  <!-- MENSAGEM FINAL TYPEWRITER -->
   <section id="mensagem">
-    <div class="container">
-      <div class="message-card animate-on-scroll">
-        <div class="msg-heart">♥</div>
-        <h2>Mariana,</h2>
-        <p>Você não está aqui por uma data especial. Você está aqui porque você <em>é</em> especial — todos os dias, em todos os momentos.</p>
-        <p>Dois anos me ensinaram que o que existe entre a gente não cabe em nenhuma data do calendário. Cabe só aqui, no peito, onde você mora desde que te conheci.</p>
-        <p>Obrigado por voltar. Obrigado por ser você. Obrigado por ser minha.</p>
-        <div class="msg-signature">
-          Com todo o amor que tenho,<br />
-          <strong>Rodrigo</strong>
-        </div>
-        <div class="floating-hearts">
-          <span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span>
-        </div>
+    <div class="msg-glow"></div>
+    <div class="msg-wrap">
+      <div class="msg-header">
+        <svg class="msg-heart-svg" viewBox="0 0 60 55" fill="none">
+          <path d="M30 50 C30 50 3 33 3 17 A14 14 0 0 1 30 12 A14 14 0 0 1 57 17 C57 33 30 50 30 50Z" fill="#e8a0b4" opacity=".25"/>
+          <path d="M30 50 C30 50 3 33 3 17 A14 14 0 0 1 30 12 A14 14 0 0 1 57 17 C57 33 30 50 30 50Z" stroke="#e8a0b4" stroke-width="1" fill="none"/>
+        </svg>
+        <h2 class="msg-to">Mariana,</h2>
+      </div>
+      <div class="msg-body" id="msgBody">
+        <span id="typeText"></span><span class="type-cursor">|</span>
+      </div>
+      <div class="msg-sig" id="msgSig">
+        <span>Com todo o amor que tenho,</span><br/>
+        <strong>Rodrigo</strong>
+      </div>
+      <div class="msg-floating">
+        <span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>Feito com <span class="gold">♥</span> por Rodrigo, para Mariana</p>
-    <p class="footer-date">Abril de 2026</p>
+    <p>Feito com <span class="gold-txt">♥</span> por Rodrigo, para Mariana &mdash; Abril 2026</p>
   </footer>
 
   <script src="script.js"></script>
